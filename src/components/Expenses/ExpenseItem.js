@@ -10,14 +10,16 @@ function ExpenseItem(props) {
     setTitle("Updated");
   };
   return (
-    <Card className="item">
-      <ExpenseDate date={props.date} />
-      <div className="item_description">
-        <h2>{title}</h2>
-      </div>
-      <div className="amount">${props.amount}</div>
-      <button onClick={clickHandler}>Change title</button>
-    </Card>
+    <li>
+      <Card className="item">
+        <ExpenseDate date={props.date} />
+        <div className="item_description">
+          <h2>{title}</h2>
+        </div>
+        <div className="amount">${props.amount}</div>
+        <button onClick={clickHandler}>Change title</button>
+      </Card>
+    </li>
   );
 }
 
